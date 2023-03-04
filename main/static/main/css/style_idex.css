@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spectral:200,400&display=swap&subset=cyrillic');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.hidden {
+    display: none !important;
+}
+.visible {
+    display: flex !important;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Spectral', serif;
+    font-weight: 200;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 5% 0 3%;
+}
+i {
+    color: rgb(218, 37, 28);
+}
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    z-index: 999;
+}
+header a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .7);
+}
+header a:hover {
+    color: red;
+    transition: .3s;
+}
+header>a#logo {
+    display: flex;
+    width: 20%;
+    align-content: center;
+    align-items: center;
+}
+header>a#logo>img {
+    width: 70px;
+    
+    margin-right: 3%;
+    box-shadow: none;
+}
+header>a#logo>p {
+    margin: 0;
+    font-family: 'Rubik', 'Arial', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+header>a#logo>p>span {
+    font-size: .7em;
+}
+header>div {
+    display: none;
+    text-align: right;
+    font-size: 2em;
+    cursor: pointer;
+}
+header>div>a#cancel {
+    display: none;
+}
+header>nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+main>section h2 {
+    font-size: 2em;
+}
+main>section>article {
+    font-size: 1.3em;
+    line-height: 1.7;
+    text-align: justify;
+}
+main>section>article p {
+    margin: 1% 0;
+    text-indent: 2em;
+}
+main>section>article>ul {
+    list-style-position: inside;
+    list-style: none;
+}
+main>section>article>ul>li>i {
+    margin-right: .3em;
+}
+main>section>#advantages {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+main>section>#advantages>div {
+    display: flex;
+    align-items: center;
+    width: calc(100%/3);
+    margin: 3% 0;
+}
+main>section>#advantages>div>i {
+    width: 25%;
+    font-size: 3.5em;
+    text-align: center;
+}
+main>section>#advantages>div>p {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+main>section#objects>div#description {
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+}
+main>section#objects>div#description>p {
+    font-size: 1.1em;
+    line-height: 1.9;
+}
+div#clients {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 15vh);
+    justify-items: center;
+    align-items: center;
+}
+div#clients>div {
+    width: 50%;
+    text-align: center;
+}
+div#clients>div:nth-child(7)>a>img {
+    width: 65%;
+}
+div#clients a>img {
+    opacity: .5;
+}
+div#clients a:hover>img {
+    opacity: 1;
+}
+main>section#contacts>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.adrs{
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 1.2em;
+}
+main>section#contacts div#data>a {
+    color: rgb(218, 37, 28);
+    text-decoration: none;
+}
+
+main>section#contacts div#data>address {
+    font-style: normal;
+}
+main>section#contacts div#data>div#schedule {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+main>section#contacts div#data>div#schedule>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.telef {
+    font-size: 1.4em;
+}
+main>section#contacts div#data>div#schedule>div>div.figures>div {
+    width: 1.4em;
+    height: .6em;
+    margin: 5px 0;
+    background-color: rgb(76, 76, 76);
+}
+main>section#contacts div#data>div#schedule>div>div.figures>div:first-of-type {
+    margin-top: 0;
+}
+main>section#contacts div#data>div#schedule>div>div.figures>div:last-of-type {
+    margin-bottom: 0;
+}
+main>section#contacts div#data>div#schedule>div:last-child>div.figures>div {
+    background-color: rgb(218, 37, 28);
+}
+.time1{
+    font-size: 2.4em;
+    color: rgb(76, 76, 76);
+}
+main>section#contacts div#data>div#schedule>div:last-child>div.text {
+    color: rgb(218, 37, 28);
+}
+main>section#contacts div#map {
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+footer {
+    width: 80%;
+    margin: 3% auto 0;
+    padding: 15px 0;
+    border-top: 2px solid rgb(76, 76, 76);
+    text-align: center;
+}
+footer a {
+    color: rgb(218, 37, 28);
+    text-decoration: none;
+}
+@media (max-width: 1366px) {
+    main>section>#advantages>div>i {
+        font-size: 3em;
+    }
+    main>section>#advantages>div>p {
+        font-size: 1em;
+    }
+    .deviz{
+        font-size: 110px;
+    }
+}
+@media (max-width: 1250px) {
+    header nav {
+        font-size: 0.9em;
+    }
+    main>section#contacts>div#data {
+        font-size: 1.1em;
+    }
+    .deviz{
+        font-size: 100px;
+    }
+}
+@media (max-width: 1120px) {
+    main>section#contacts>div#data {
+        font-size: .9em;
+    }
+    .deviz{
+        font-size: 90px;
+    }
+}
+@media (max-width: 1010px) {
+    header>nav {
+        font-size: .8em;
+    }
+    .deviz{
+        font-size: 80px;
+    }
+}
+@media (max-width: 960px) {
+    header {
+        padding: 0 5%;
+    }
+    main, footer {
+        width: 90%;
+    }
+    header>nav{
+        padding-left: 10px;
+        padding-right: 10px;
+       
+       
+    }
+    header>a{
+        max-width: 50px;
+    }
+    main>section>article>ul>li{
+        margin-bottom: 12px;
+    }
+    p{
+        line-height: 1.3;
+    }
+    .deviz{
+        font-size: 75px;
+    }
+}
+@media (max-width: 850px) {
+    header>div {
+        display: inline-block;
+    }
+    header>a>p{
+        display: none;    
+    }
+    header>nav {
+        width: 80%;
+        padding: 0 10%;
+    }
+    h1, h2 {
+        margin: 10% 0 5%;
+    }
+    main>section>#advantages>div>i {
+        width: 30%;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    main>section>#advantages>div>p {
+        font-size: .8em;
+    }
+    main>section#contacts div#data>div#schedule {
+        width: 20%;
+    }
+    header>nav{
+        padding-left: 10px;
+        padding-right: 10px;
+       
+    }
+    header>a{
+        max-width: 50px;
+    }
+    .deviz{
+        font-size: 65px;
+    }
+}
+@media (max-width: 680px) {
+    header {
+        height: 60px;
+        padding: 0 2%;
+    }
+    header>nav{
+        padding-left: 10px;
+        padding-right: 10px;
+       
+    }
+    header>a{
+        max-width: 50px;
+    }
+    header>a#logo p {
+        font-size: .8em;
+        margin: 5% 10%;
+        
+    }
+    main>section>#advantages {
+        flex-direction: column;
+        align-items: center;
+    }
+    main>section>#advantages>div {
+        width: 100%;
+        margin: 5% 0;
+    }
+    main>section>#advantages>div>i {
+        width: 30%;
+        font-size: 4.2em;
+        text-align: center;
+    }
+    main>section>#advantages>div>p {
+        font-size: 1.4em;
+    }
+    div#clients {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 130px);
+    }
+    main>section#objects>div#clients>div {
+        width: 70%;
+    }
+    main>section#objects>div#clients>div img {
+        width: 100%;
+    }
+    main>section#objects>div#clients>div:nth-child(7)>a>img {
+        width: 70%;
+    }
+    main>section#contacts div#data>div#schedule {
+        width: 30%;
+    }
+    .deviz{
+        font-size: 53px;
+    }
+}
+@media (max-width: 570px) {
+    main>section#contacts>div#data {
+        font-size: 1em;
+    }
+    .deviz{
+        font-size: 43px;
+    }
+}
+@media (max-width: 490px) {
+    header>nav {
+        font-size: 11px;   
+    }
+    .time1{
+        font-size: 2em;
+        min-width: 100px;
+    }
+    .text1{
+        margin-left: 15%;
+    }
+    header>a#logo>img {
+        width: 50px;
+    }
+    
+}
+@media (max-width: 490px) {
+    header>nav {
+        font-size: 9px;   
+    }
+    .deviz{
+        font-size: 30px;
+    }
+}
+@media (max-width: 350px) {
+    header>nav {
+        font-size: 8px;   
+    }
+    .telef{
+        font-size: 1.2em;
+    }
+    .adrs{
+        font-size: 1.2em;
+    }
+    header>a#logo>img {
+        width: 40px;
+    }
+    header>nav {
+        padding: 0;
+    }
+    .deviz{
+        font-size: 24px;
+    }
+}
+
