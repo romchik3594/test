@@ -6,36 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="yandex-verification" content="6dc24041b8a0e86d" />
-    <title>Строительная Компания "Стройиндустрия"</title>
+    <title>ADASI</title>
     <link rel="shortcut icon" href="{% static 'main/img/favicon.ico' %}" type="image/x-icon">   
 	<link rel="stylesheet" href="{% static 'main/css/swiper.min.css'%}">
-	<link rel="stylesheet" type="text/css" href="style/style_footer_header.css">
     <script src="https://kit.fontawesome.com/06021f1363.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-    <link rel="stylesheet" href="{% block style %}{% endblock style %}">
+    <script src="https://unpkg.com/htmx.org@1.8.6" integrity="sha384-Bj8qm/6B+71E6FQSySofJOUjA/gq330vEqjFx9LakWybUySyI1IQHwPtbTU7bNwx" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <a href="index.php" id="logo">
-            <img id='logo_pic' src="{% static 'main/img/logo.png' %}" alt="Logo" title="Стройиндустрия" style="box-shadow: none;">
-            <p id="logo_p">
-               <span>Строительная компания</span> &laquo;Стройиндустрия&raquo;
-            </p>
-        </a>
-        <nav id="nav">
-            <a href="index.php#about">О нас</a>
-            <a href="index.php#advantages">Преимущества</a>
-            <a href="project.php">Проекты</a>
-            <a href="index.php#clients">Клиенты</a>
-            <a href="index.php#contacts">Контакты</a>
-        </nav>
+        
         
     </header>
     {% block content %}
 
     {% endblock %}
     <footer id="foot">
-        2004-2020 &copy; &laquo;Стройиндустрия&raquo;</a>
+      
     </footer>
 </body>
 </html>

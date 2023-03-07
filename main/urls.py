@@ -6,3 +6,9 @@ urlpatterns = [
     path('about', views.somepage)
     
 ]
+
+htmx_urlpatterns = [
+    path('update/',views.update, name='update')
+]
+
+urlpatterns += htmx_urlpatterns

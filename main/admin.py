@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import IoT
 
-# Register your models here.
+admin.site.register(IoT)
