@@ -7,6 +7,7 @@ import sys
 import gc
 broker = "broker.hivemq.com"
 topic = "test35941/data"
+topics = ["test35941/data","test35942/data","test35943/data","test35944/data",]
 client_id = f'python-mqtt-{random.randint(0, 100)}'
 port = 1883
 username = ""
@@ -46,12 +47,14 @@ def subscribe(client: mqtt_client):
     def on_message(client, userdata, msg):
         print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
         model_instance = IoT.objects.get(id=1)
-        model_instance.gas = msg.payload.decode()
+        if msg.topic == 'test35941/data': model_instance.gas = msg.payload.decode()
+        if msg.topic == 'test35942/data': model_instance.liq = msg.payload.decode()
+        if msg.topic == 'test35943/data': model_instance.punch = msg.payload.decode()
+        if msg.topic == 'test35944/data': model_instance.tempre = msg.payload.decode()
         model_instance.save()
-        #sys.exit()
-        client.loop_stop()
 
-    client.subscribe(topic)
+    for el in topics:
+        client.subscribe(el)
     client.on_message = on_message
     client.loop_stop()
 
