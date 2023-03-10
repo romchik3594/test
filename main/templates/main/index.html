@@ -2,9 +2,25 @@
 {% load static %}
 {% block style %}{% static 'main/css/style_idex.css'%}{% endblock style %}
 {% block content %}
-<ul>
-    <li id="gas" hx-post = "/update/" hx-trigger="every 2s">{{db.gas}}</li>
-    
+<ul >
+    <form action="post" >
+        <li hx-post = "/update1/" hx-trigger="every 3s">{{db.liq}}</li>
+        <li hx-post = "/update2/" hx-trigger="every 3s">{{db.liq}}</li>
+        <li hx-post = "/update3/" hx-trigger="every 3s">{{db.liq}}</li>
+        <li hx-post = "/update4/" hx-trigger="every 3s">{{db.liq}}</li>
+        
+        
+    </form  >     
 </ul>
+<form action="validate" method="post">
+    {% csrf_token %}
+    <div class="radio-group">
+        <input type="radio" id="option-one" name="selector" checkedhx-post = "/update4/">
+        <label for="option-one">Off</label>
+        <input type="radio" id="option-two" name="selector" hx-post = "/update4/">
+        <label for="option-two">On</label>
+    </div>
+    
+</form>
 {% endblock %}
 
