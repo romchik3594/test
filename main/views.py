@@ -69,4 +69,158 @@ def update3(request):
 def update4(request):
     db = IoT.objects.get(id=1)
     return HttpResponse(db.tempre)
+@csrf_exempt
+def light11(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector1')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('0', 'romciklight35941')
+    return HttpResponse(1)
+
+@csrf_exempt
+def light12(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector1')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('1', 'romciklight35941')
+    return HttpResponse(1)
+@csrf_exempt
+def light21(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector2')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('0', 'romciklight35942')
+    return HttpResponse(1)
+@csrf_exempt
+def light22(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector2')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('1', 'romciklight35942')
+    return HttpResponse(1)
+@csrf_exempt
+def light31(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector3')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('0', 'romciklight35943')
+    return HttpResponse(1)
+@csrf_exempt
+def light32(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector3')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('1', 'romciklight35943')
+    return HttpResponse(1)
+@csrf_exempt
+def light41(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector4')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('0', 'romciklight35944')
+    return HttpResponse(1)
+@csrf_exempt
+def light42(request):
+    db = IoT.objects.get(id=1)
+    some = request.POST.get('selector4')
+    
+    print(f'{some[0]} {some[1]}')
+    match some[0]:
+        case '1':
+            db.light1 = some[1]
+        case '2':
+            db.light2 = some[1]
+        case '3':
+            db.light3 = some[1]
+        case '4':
+            db.light4 = some[1]
+
+    db.save()
+    run('1', 'romciklight35944')
+    return HttpResponse(1)
+
     
